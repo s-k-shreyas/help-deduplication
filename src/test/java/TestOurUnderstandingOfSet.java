@@ -7,8 +7,7 @@ import java.util.HashSet;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /*
@@ -88,9 +87,9 @@ public class TestOurUnderstandingOfSet {
             Point origin = new Point(0, 0);
             Point anotherOrigin = new Point(0, 0);
 
-            HashSet<Point> integers = new HashSet<>(asList(origin, anotherOrigin));
+            HashSet<Point> points = new HashSet<>(asList(origin, anotherOrigin));
 
-            assertThat(integers.size(), is(1));
+            assertThat(points.size(), is(1));
         }
     }
 }
