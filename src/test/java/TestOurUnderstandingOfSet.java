@@ -91,5 +91,15 @@ public class TestOurUnderstandingOfSet {
 
             assertThat(points.size(), is(1));
         }
+
+        @Test
+        void withTwoEqualElementsOtherThanOriginHaveSizeOfOne(){
+            Point point1 = new Point(3, 5);
+            Point point2 = new Point(3, 5);
+
+            HashSet<Point> points = new HashSet<>(asList(point1, point2));
+
+            assertThat(points.size(), is(1));
+        }
     }
 }
